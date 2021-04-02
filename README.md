@@ -1,22 +1,18 @@
 ![](demo.gif)
 
-## What is Markup?
+## What is DataAnnotator?
 
-Markup is an online annotation tool that can be used to transform unstructured documents into structured formats for NLP and ML tasks, such as named-entity recognition. Markup learns as you annotate in order to predict and suggest complex annotations. Markup also provides integrated access to existing and custom ontologies, enabling the prediction and suggestion of ontology mappings based on the text you're annotating.
+DataAnnotator is an online annotation tool that can be used to transform unstructured documents into structured formats for NLP and ML tasks, such as named-entity recognition. DataAnnotator learns as you annotate in order to predict and suggest complex annotations. DataAnnotator also provides integrated access to existing and custom ontologies, enabling the prediction and suggestion of ontology mappings based on the text you're annotating.
 
 ## Usage
 
-A full-feature version of Markup is available both via website and local installation.
-
-### Online
-
-The online version of Markup can be found <a href="https://www.getmarkup.com/">here</a>.
+A full-feature version of DataAnnotator is available via local installation.
 
 ### Local Server
 
 #### Docker
 
-Run `docker run -d -p 80:8000 samueldobbie/markup` and visit <a href="http://127.0.0.1/">http://127.0.0.1/</a>.
+Run `docker run -d -p 80:8000 juezhao/DataAnnotator` and visit <a href="http://127.0.0.1/">http://127.0.0.1/</a>.
 
 #### Manual Installation
 
@@ -27,10 +23,6 @@ Run `docker run -d -p 80:8000 samueldobbie/markup` and visit <a href="http://127
 3. Visit <a href="http://127.0.0.1/">http://127.0.0.1/</a>.
 
 For futher sessions, the local server can be started directly by running `python manage.py runserver 0.0.0.0:80`.
-
-## Documentation
-
-Documentation to help with setting up and using Markup can be found <a href="https://www.getmarkup.com/doc">here</a>.
 
 ## Features
 
@@ -44,14 +36,5 @@ Documentation to help with setting up and using Markup can be found <a href="htt
 - Full-feature tool available via local installation and website.
 - Dark mode.
 
-## Future Plans
-
-- Add user accounts.
-- Add ability for users to join a team and share ontologies, documents, guidelines, annotations, etc.
-- Accessible version for colour-blind users.
-- Add ability to perform text and image classification.
-- Add ability to annotate images.
-
 ## Known Bugs / Issues
 - Annotations may be offset when annotating across newlines in CRLF (Windows) text documents. The offset is purely visual; the exported indicies will be correct.
-- When using the website version of Markup, certain features may freeze while annotations are being predicted.
