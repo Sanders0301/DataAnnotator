@@ -2,7 +2,7 @@
 
 {% block head %}
     {% load static %}
-    <title>Documentation - Markup</title>
+    <title>Documentation - Data Annotator</title>
     <link href="{% static 'css/doc.css' %}" rel="stylesheet" />
     <script src="{% static 'js/doc.js' %}"></script>
 {% endblock %}
@@ -11,7 +11,7 @@
     <div class="doc-container">
         <h1 class="doc-headline">Documentation</h1>
         <p class="doc-line">
-            Markup is an online annotation tool that can be used to transform unstructured documents into structured <a class="doc-link" href="http://brat.nlplab.org/standoff.html" target="_blank">standoff format</a> for NLP and ML tasks, such as named-entity recognition. Markup learns as you annotate in order to predict and suggest complex annotations. Markup also provides integrated access to existing and custom ontologies, enabling the prediction and suggestion of ontology mappings based on the text you're annotating.
+            DataAnnotator is an online annotation tool that can be used to transform unstructured documents into structured <a class="doc-link" href="http://brat.nlplab.org/standoff.html" target="_blank">standoff format</a> for NLP and ML tasks, such as named-entity recognition. DataAnnotator learns as you annotate in order to predict and suggest complex annotations. DataAnnotator also provides integrated access to existing and custom ontologies, enabling the prediction and suggestion of ontology mappings based on the text you're annotating.
         </p>
 
         <h2 class="doc-headline">
@@ -45,7 +45,7 @@
         <p class="doc-line">
             <span class="doc-field">Ontology</span> - A dictionary of terms, codes, and related data to be accessed during annotation.
             <ul class="doc-line doc-list">
-                <li><span class="doc-field">Pre-loaded</span> - Markup offers pre-loaded ontologies that can be used. Certain pre-loaded ontologies require external permissions (e.g. the Unified Medical Language System), for which you will need to login to authorise access.</li>
+                <li><span class="doc-field">Pre-loaded</span> - DataAnnotator offers pre-loaded ontologies that can be used. Certain pre-loaded ontologies require external permissions (e.g. the Unified Medical Language System), for which you will need to login to authorise access.</li>
                 <li><span class="doc-field">Custom</span> - You can provide a custom ontology by providing a text document, where each line is of the form [TERM][TAB][CODE], as shown below.</li>
             </ul>
         </p>
@@ -82,7 +82,7 @@
         <p class="doc-line">
             <span class="doc-field">Ontology</span> - A dictionary of terms, codes, and related data to be accessed during annotation.
             <ul class="doc-line doc-list">
-                <li><span class="doc-field">Pre-loaded</span> - Markup offers pre-loaded ontologies that can be used. Certain pre-loaded ontologies require external permissions (e.g. the Unified Medical Language System), for which you will need to login to authorise access.</li>
+                <li><span class="doc-field">Pre-loaded</span> - DataAnnotator offers pre-loaded ontologies that can be used. Certain pre-loaded ontologies require external permissions (e.g. the Unified Medical Language System), for which you will need to login to authorise access.</li>
                 <li><span class="doc-field">Custom</span> - You can provide a custom ontology by providing a text document, where each line is of the form [TERM][TAB][CODE], as shown above.</li>
             </ul>
         </p>
@@ -98,7 +98,7 @@
                 <li>Highlight the desired span of text within the open document.</li>
                 <li>Select a desired entity.</li>
                 <li>Populate or select a value from the available attributes, which have been dynamically displayed based on the chosen entity.</li>
-                <li>Select an ontology term to map to. Markup automatically suggests ontology mappings based on the text you're annotating, although a direct search of the ontology can be performed via Markup if necessary.</li>
+                <li>Select an ontology term to map to. DataAnnotator automatically suggests ontology mappings based on the text you're annotating, although a direct search of the ontology can be performed via DataAnnotator if necessary.</li>
                 <li>Add the annotation by pressing the <span class="doc-field">+ Annotation</span> button</li>
             </ul>
         </p>
@@ -112,7 +112,7 @@
             Clicking an annotation within the annotation panel will display a dropdown that contains all information (e.g. attributes) that correspond with the annotation, along with options for editing and deleting the annotation. 
         </p>
         <p class="doc-line">
-            Markup allows for unlimited annotation of a single region, thus enabling the capture of complex data.
+            DataAnnotator allows for unlimited annotation of a single region, thus enabling the capture of complex data.
         </p>
         <h2 class="doc-headline">
             Data Generation <button class="main-button green-button" id="show-hide-data-gen">GIF - Show/Hide</button>
@@ -131,10 +131,10 @@
         </h2>
         <img src="{% static 'Prediction.gif' %}" alt="Predicting annotations Gif" style="width: 92%; margin: 2%; display: none;" id = "predictGIF">
         <p class="doc-line">
-            Markup functionality includes a novel system to predict and suggest complex annotation using Active and Sequence-to-Sequence learning models.
+            DataAnnotator functionality includes a novel system to predict and suggest complex annotation using Active and Sequence-to-Sequence learning models.
         </p>
         <p class="doc-line">
-            Upon opening or switching to a document, Markup will predict all annotations and display them in a collapsible drop-down within the annotation panel. Each annotation will be grouped and coloured based on its entity category, and ordered based on its appearance within the document text.
+            Upon opening or switching to a document, DataAnnotator will predict all annotations and display them in a collapsible drop-down within the annotation panel. Each annotation will be grouped and coloured based on its entity category, and ordered based on its appearance within the document text.
         </p>
         <p class="doc-line">
             Each annotation suggestion will consist of:
