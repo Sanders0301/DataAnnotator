@@ -1,8 +1,8 @@
 version: 0.0
 os: linux
 files:
-  - source: /index.html
-    destination: 
+  - source: /templates/base.html
+    destination: /D:\AUT\2021 S1\rnd\DataAnnotator
 hooks:
   BeforeInstall:
     - location: scripts/install_dependencies
