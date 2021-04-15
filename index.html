@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+    <head>
+        {% load static %}
+
+        <meta charset='UTF-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+
+        <link href="{% static 'favicon.ico' %}" rel="shortcut icon" />
+        <link href="{% static 'css/third-party/loading.io.css' %}" rel="stylesheet">
+        <link href="{% static 'css/base.css' %}" rel="stylesheet" />
+
+        <script src="{% static 'js/third-party/jquery.min.js' %}"></script>
+        <script src="{% static 'js/base.js' %}"></script>
+        <script src="https://kit.fontawesome.com/140067eff9.js" crossorigin="anonymous"></script>
+
+        <!-- Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148811237-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-148811237-1');
+        </script>
+        
+        {% block head %}
+        {% endblock %}
+    </head>
+
+    <body>
+        <nav>
+            <a class="nav-logo" href="/">/// Data Annotator</a>
+            <ul class="nav-item-list">
+                <li id="move-to-next-file" style="display: none;"><a class="nav-item nav-item-arrow">></a></li>
+                <li id="move-to-previous-file" style="display: none;"><a class="nav-item nav-item-arrow"><</a></li>
+                <li id="switch-file" style="display: none;"><a class="nav-item"><select id="switch-file-dropdown" class="dropdown"></select></a></li>
+                <li><a class="nav-item" href="/setup">Annotate</a></li>
+                <li><a class="nav-item" id="theme-toggle" onclick="display.toggle();">Light Mode</a></li>
+                <li><a class="nav-item" target="_blank" href="/setup/data-generator/">Data Generator</a></li>
+            </ul>
+        </nav>
+
+        {% block content %}
+        {% endblock %}
+    </body>
+
+</html>
