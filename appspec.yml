@@ -1,7 +1,7 @@
 version: 0.0
-os: linux
+os: Windows
 files:
-  - source: /home\templates\home.html
+  - source: /home/templates/home.html
     destination: /D:\AUT\2021 S1\rnd\DataAnnotator
 hooks:
   BeforeInstall:
