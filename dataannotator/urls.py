@@ -9,8 +9,8 @@ urlpatterns = [
     path('setup/', include('setup.urls')),
     path('doc/', include('doc.urls')),
     path('annotate/', include('annotate.urls')),
-    path('admin/', admin.site.urls),
     path('login/', include('login.urls')),
+    path('admin/', admin.site.urls),
     re_path(r'^static/(?P<path>.*)$', serve, {
         'document_root': settings.STATIC_ROOT
     }),
