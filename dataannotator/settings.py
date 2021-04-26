@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     "home",
     "setup",
     "login",
+    "about",
 ]
 
 MIDDLEWARE = [
