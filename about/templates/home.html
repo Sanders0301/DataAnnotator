@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    {% load static %}
+    <title>DataAnnotator - Rapid Annotation, Powered by AUT RND Group</title>
+    <link href="{% static 'css/about.css' %}" rel="stylesheet" />
+    <script src="{% static 'js/about.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+    {% csrf_token %}
+    <div class="landing-container unselectable">
+        <p class="tagline">
+            <span class="tagline-component tagline-component-main">
+                DataAnnotator
+            </span>
+            
+            <span class="tagline-component tagline-component-sub">
+                Rapid annotation, powered by AUT RND Group.
+            </span>
+        </p>
+        
+        <div>
+            <a href="{% url 'doc' %}">
+                <button class="option-button gray-button">Docs</button>
+            </a>
+
+            <a href="{% url 'setup' %}">
+                <button class="option-button">Annotate</button>
+            </a>
+           
+            <a href="{% url 'login' %}">
+                <button class="option-button">Login</button>
+            </a>
+            
+            <a href="{% url 'about' %}">
+                <button class="option-button">About</button>
+            </a>
+
+            <br><br>
+
+            <a class="try-demo" onclick="tryDemo();">
+                ...or try out a demo
+            </a>
+        </div>
+    </div>
+{% endblock %}
